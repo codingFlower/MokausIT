@@ -1,0 +1,27 @@
+git config --global user.name "Sam Smith"      ||
+git config --global user.email "sam@gmail.com" || Tell GIT who you are
+git config --list                              || to check configurations
+
+git init                                       || Initialize repository
+rm -rf .git                                    || Remove repository
+
+git status                                     || check status of files
+
+touch .gitignore                               || creates file where you can include files which you don't want to add to repository
+
+git add -A                                     || add all files to the loading stage
+git reset -A                                   || remove all files from loading stage
+git commit -m "Changes that you made"          || commiting all files
+                   
+git log                                        || check all commits that were made
+
+git clone URL                                  || clone remote repository from somewhere to your pc
+git remote                                     || show added remote repostories
+git pull origin master                         || take everything from remote repository
+git push origin master                         || upload your changes to remote repository
+
+
+git branch                                     || Check existing branches
+git branch name                                || Create new branch
+git checkout name                              || Switch to another branch
+git merge                                      || Merge with another branch
