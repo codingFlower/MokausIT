@@ -1,0 +1,54 @@
+create database name;  || creates database
+CREATE TABLE student (
+student_id INTEGER PRIMARY KEY,
+name VARCHAR(20),
+major VARCHAR(20)
+);
+
+DESCRIBE student;       || shows info about TABLE
+
+DROP TABLE student;      || deletes TABLE
+ALTER TABLE student ADD gpa DECIMAL(3,2); || add new column
+ALTER TABLE student DROP COLUMN gpa;      || remove column
+
+INSERT INTO student VALUES(1, 'Jack', 'Biology'); || add data to TABLE
+INSERT INTO student(student_id, name) VALUES(3, "Claire") || add specific data to the table
+
+SELECT * FROM student;                      || Print the entire TABLE
+
+
+
+CREATE TABLE student (
+student_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(20) NOT NULL,
+major VARCHAR(20) DEFAULT "undecided"
+);
+
+DESCRIBE student;
+
+DROP TABLE student;
+
+ALTER TABLE student ADD gpa DECIMAL(3,2);
+ALTER TABLE student DROP COLUMN gpa;
+
+INSERT INTO student VALUES(1, 'Jack', 'Biology');
+
+SELECT *
+ FROM student
+  WHERE major IN("BIO", "Math")
+ ORDER BY student_id DESC
+ LIMIT 3;
+
+
+INSERT INTO student(name, major) VALUES("Kate", "Sociology");
+
+INSERT INTO student VALUES(3,"Claire", NULL);
+INSERT INTO student VALUES(4, "Jack", "Biology");
+INSERT INTO student VALUES(5, "Mike", "Computer Science");
+
+UPDATE student
+SET major = "Math"
+WHERE student_id = 4;
+
+DELETE FROM student
+WHERE student_id = 5;
