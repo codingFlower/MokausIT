@@ -12,6 +12,8 @@ touch .gitignore                               || creates file where you can inc
 git add -A                                     || add all files to the loading stage
 git reset -A                                   || remove all files from loading stage
 git commit -m "Changes that you made"          || commiting all files
+git log --oneline                              || check all commits
+
                    
 git log                                        || check all commits that were made
 
